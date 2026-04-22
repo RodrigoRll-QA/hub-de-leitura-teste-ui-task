@@ -35,11 +35,6 @@ A automação seguiu padrões modernos de desenvolvimento de testes:
 ## 📈 Conclusão Técnica
 A suíte de testes atingiu 100% de cobertura no fluxo crítico de autenticação. A arquitetura modular permite que novos cenários (como recuperação de senha ou edição de perfil) sejam adicionados com esforço mínimo, mantendo o projeto escalável e de fácil manutenção.
 
-## 💡 Sugestões de Melhoria (Roadmap)
-- [ ] **Integração CI/CD:** Configuração de GitHub Actions para execução automática a cada Push.
-- [ ] **Relatórios Avançados:** Implementação do Mochawesome Reporter para visualização gráfica de falhas.
-- [ ] **Testes de API:** Validar os endpoints de backend antes de iniciar a jornada de UI.
-
 ## 📂 Estrutura do Repositório
 * `/cypress/e2e`: Arquivo de teste principal (`end-to-end.cy.js`).
 * `/cypress/fixtures`: Massa de dados estática (`usuario.json`).
