@@ -1,54 +1,53 @@
-# 📑 Automação Hub de Leitura - EBAC
+# 🚀 Hub de Leitura - Automação de Testes E2E
 
 <p align="left">
-  <img src="https://img.shields.io/badge/-cypress-%23E9E9E9?style=for-the-badge&logo=cypress&logoColor=31E5A1" />
-  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
-  <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Faker.js-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Curso-EBAC-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Concluído-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Origin-EBAC-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Framework-Cypress-E9E9E9?style=for-the-badge&logo=cypress&logoColor=31E5A1" />
+  <img src="https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Data-Faker.js-green?style=for-the-badge" />
 </p>
 
-## 🚀 Sobre o Projeto
-Este projeto foi desenvolvido como parte da conclusão de módulo do curso de **Engenharia de Qualidade de Software** da **EBAC**. O objetivo é realizar a automação de um fluxo **End-to-End (E2E)** completo, simulando a jornada real de um usuário no sistema "Hub de Leitura".
+Este projeto consiste na automação completa da jornada do usuário na plataforma **Hub de Leitura**. O foco principal foi implementar um fluxo **End-to-End (E2E)** robusto, utilizando as melhores práticas de engenharia de software para garantir que o processo de cadastro e login funcione sem falhas.
+
+## 📋 Sobre o Projeto
+O Hub de Leitura é uma plataforma de gestão de livros onde a confiabilidade do cadastro de novos usuários é crítica. Esta automação simula o comportamento real do usuário, desde a criação da conta com dados dinâmicos até a validação do acesso ao Dashboard, garantindo a integridade do sistema após cada atualização de código.
+
+## 🛠️ Metodologia e Ferramentas
+A automação seguiu padrões modernos de desenvolvimento de testes:
+* **Cypress:** Framework principal para execução de testes E2E e asserções em tempo real.
+* **Custom Commands:** Abstração de lógicas de interface em comandos reutilizáveis para reduzir a duplicidade de código.
+* **Faker.js:** Geração de massa de dados aleatória e válida para garantir testes isolados e evitar erros de e-mails duplicados.
+* **Data Fixtures:** Uso de arquivos JSON para gerenciar dados estáticos e mensagens do sistema.
+
+## 🔍 Detalhes da Implementação (Test Strategy)
+
+### 1. Fluxo Integrado (Single Flow)
+* **Objetivo:** Validar em um único ciclo o Cadastro -> Logoff -> Login.
+* **Impacto:** Garante que o banco de dados está persistindo as informações corretamente e que a sessão do usuário é gerenciada de forma segura.
+
+### 2. Segurança de Logs e Dados Sensíveis
+* **Prática:** Implementação do parâmetro `{ log: false }` em campos de senha.
+* **Impacto:** Evita que credenciais de teste apareçam nos logs do console ou em evidências de vídeo/screenshot, seguindo normas de segurança.
+
+### 3. Abstração de Comandos (Clean Code)
+* **Estrutura:** Movimentação de seletores e cliques para o `commands.js`.
+* **Benefício:** O arquivo de teste torna-se puramente descritivo (BDD Style), facilitando a leitura por membros não técnicos da equipe.
+
+## 📈 Conclusão Técnica
+A suíte de testes atingiu 100% de cobertura no fluxo crítico de autenticação. A arquitetura modular permite que novos cenários (como recuperação de senha ou edição de perfil) sejam adicionados com esforço mínimo, mantendo o projeto escalável e de fácil manutenção.
+
+## 💡 Sugestões de Melhoria (Roadmap)
+- [ ] **Integração CI/CD:** Configuração de GitHub Actions para execução automática a cada Push.
+- [ ] **Relatórios Avançados:** Implementação do Mochawesome Reporter para visualização gráfica de falhas.
+- [ ] **Testes de API:** Validar os endpoints de backend antes de iniciar a jornada de UI.
+
+## 📂 Estrutura do Repositório
+* `/cypress/e2e`: Arquivo de teste principal (`end-to-end.cy.js`).
+* `/cypress/fixtures`: Massa de dados estática (`usuario.json`).
+* `/cypress/support`: Comandos customizados (`commands.js`).
+* `package.json`: Dependências e scripts de execução.
 
 ---
-
-## 🛠️ Cenário Automatizado
-O teste foi consolidado no arquivo `end-to-end.cy.js` e executa as seguintes ações de forma integrada:
-- [x] **Cadastro:** Criação de conta com e-mail dinâmico e dados realistas.
-- [x] **Validação de Cadastro:** Verificação de redirecionamento para o Dashboard.
-- [x] **Logoff:** Saída controlada do sistema para testar a reentrada.
-- [x] **Login:** Acesso utilizando as mesmas credenciais geradas no cadastro.
-- [x] **Asserção Final:** Confirmação de acesso ao ambiente logado.
-
----
-
-## 🏗️ Diferenciais e Boas Práticas
-Para garantir um código de nível profissional, foram aplicados os seguintes conceitos:
-* **Custom Commands:** Centralização das lógicas de Login e Cadastro no arquivo `commands.js`, facilitando a manutenção e reuso.
-* **Massa Dinâmica (Faker.js):** Uso da biblioteca Faker para gerar e-mails exclusivos (ex: `Rodrigo_...`), evitando falhas por duplicidade de dados.
-* **Fixtures (JSON):** Separação de dados estáticos e mensagens de sucesso em arquivos de configuração.
-* **Segurança:** Implementação de `{ log: false }` em campos de senha para evitar a exposição de dados sensíveis no console do Cypress.
-
----
-
-## 💻 Instalação e Execução
-
-1. **Clone este repositório:**
-   ```bash
-   git clone https://github.com/SEU_USUARIO/hub-de-leitura-ebac.git
-Instale as dependências:
-
-Bash
-npm install
-Inicie o Hub de Leitura localmente.
-
-Abra o painel do Cypress:
-
-Bash
-npx cypress open
-
-👤 Autor
-Rodrigo Lins Lopes
-
-QA em transição de carreira focado em automação e qualidade de software.
+**Autor:** [Rodrigo Lins Lopes]
+> Analista de QA em transição de carreira | Estudante de Testes de Software na EBAC.
