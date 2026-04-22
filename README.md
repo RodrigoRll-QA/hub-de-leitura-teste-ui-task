@@ -1,12 +1,10 @@
 # 🚀 Hub de Leitura - Automação de Testes E2E
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Status-Concluído-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Origin-EBAC-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Framework-Cypress-E9E9E9?style=for-the-badge&logo=cypress&logoColor=31E5A1" />
-  <img src="https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/Data-Faker.js-green?style=for-the-badge" />
-</p>
+![Status Badge](https://img.shields.io/badge/Status-Concluído-green)
+![EBAC Badge](https://img.shields.io/badge/Origin-EBAC-blue)
+![Cypress Badge](https://img.shields.io/badge/Framework-Cypress-E9E9E9?logo=cypress&logoColor=31E5A1)
+![JS Badge](https://img.shields.io/badge/Language-JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![Faker Badge](https://img.shields.io/badge/Data-Faker.js-green)
 
 Este projeto consiste na automação completa da jornada do usuário na plataforma **Hub de Leitura**. O foco principal foi implementar um fluxo **End-to-End (E2E)** robusto, utilizando as melhores práticas de engenharia de software para garantir que o processo de cadastro e login funcione sem falhas.
 
