@@ -1,4 +1,6 @@
 {
-  "email": "usuario@teste.com",
-  "senha": "user123"
+  "nome": "Rodrigo Lins Lopes",
+  "telefone": "21199999999",
+  "senha": "user123",
+  "msgSucesso": "dashboard"
 }
